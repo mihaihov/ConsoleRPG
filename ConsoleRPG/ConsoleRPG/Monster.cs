@@ -16,6 +16,16 @@ namespace ConsoleRPG
         public Weapon Weapon { get; set; }
         public int Accuracy { get; set; }
 
+        public Monster()
+        {
+            Name = string.Empty;
+            HitPoints = 0;
+            Armor = 0;
+            XPReward= 0;
+            Weapon = new Weapon();
+            Accuracy= 0;
+        }
+
         public Monster(string name, int hp, int acc, int xpReward, int armor, string weaponName, int lowDamage, int highDamage)
         {
             Name = name;

@@ -8,6 +8,12 @@ namespace ConsoleRPG
 {
     internal class Weapon
     {
+        public Weapon()
+        {
+            Name = string.Empty;
+            DamageRange = new Range(0, 0);
+        }
+
         public Weapon(string mName, Range? mDamageRange)
         {
             this.Name = mName;

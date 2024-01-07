@@ -117,7 +117,7 @@ namespace ConsoleRPG
             }
         }
 
-        public void Attack(Monster monster)
+        public bool Attack(Monster monster)
         {
             int selection;
             Console.WriteLine("1)Attack, 2)Run: ");
@@ -151,14 +151,16 @@ namespace ConsoleRPG
                     if(roll == 1)
                     {
                         Console.WriteLine("You ran away!");
-                        return ;
+                        return true;
                     }
                     else
                     {
                         Console.WriteLine("You could not escape!");
-                        break;
+                        return false;
                     }
             }
+
+            return false;
 
         }
 
